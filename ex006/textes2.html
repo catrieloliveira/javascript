@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTES DE SOMA</title>
+    <style>
+        body {
+            font: normal 13pt Arial;
+            background-color: beige;
+            height: 200px;
+            width: 800px;    
+        }
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TESTE DE SOMA</h1>
+    Some 2 números : <input type="number" name="soma1" id="n1"> +
+    <input type="number" name="soma2" id="n2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="somatotal">
+
+    </div>
+    <script>
+        function somar(){
+            let n1 = document.getElementById('n1');
+            let n2 = document.getElementById('n2');
+            let resul = document.getElementById ('somatotal');
+            let soma1 = Number(n1.value);
+            let soma2 = Number(n2.value);
+            let somar = soma1 + soma2;
+
+            somatotal.innerHTML = `<p>A soma entre ${soma1} e ${soma2} é igual a:<strong> ${somar}</strong> !</p>`;
+        }
+    </script>
+</body>
+</html>

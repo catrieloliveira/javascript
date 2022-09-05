@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTES </title>
+</head>
+<body>
+    <h1>Testes de JS</h1>
+    Velocidade média: <input type="number" name="velo" id="velo1">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="med">
+    </div>
+    <script>
+        function calcular (){
+            var velo = document.getElementById('velo1');
+            var med = document.getElementById('med');
+            var s = Number(velo.value);
+            med.innerHTML = `<p>Sua velocidade média é de ${s}</p>`;
+            if (s > 60) {
+                med.innerHTML += `<p>Você está acima da velocidade</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
